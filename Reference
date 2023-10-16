@@ -1,0 +1,104 @@
+@ARTICLE{Neira,
+  author={Neira, Anderson Bergamini de and Araujo, Alex Medeiros de and Nogueira, Michele},
+  journal={IEEE Transactions on Network and Service Management}, 
+  title={An Intelligent System for DDoS Attack Prediction Based on Early Warning Signals}, 
+  year={2023},
+  volume={20},
+  number={2},
+  pages={1254-1266},
+  doi={10.1109/TNSM.2022.3223881}
+}
+
+@ARTICLE{Hoang,
+  author={Hoang, Tiep M. and Nguyen, Nghia M. and Duong, Trung Q.},
+  journal={IEEE Wireless Communications Letters}, 
+  title={Detection of Eavesdropping Attack in UAV-Aided Wireless Systems: Unsupervised Learning With One-Class SVM and K-Means Clustering}, 
+  year={2020},
+  volume={9},
+  number={2},
+  pages={139-142},
+  doi={10.1109/LWC.2019.2945022}
+}
+
+@ARTICLE{Singh,
+  author={Singh, Ravinder and Kumar, Mukesh and Sharma, Shavnam and Akashdeep},
+  title={Artificial Intelligence based Model Using Various Machine Learning Techniques to detect DDoS Attack}, 
+  booktitle={2023 6th International Conference on Information Systems and Computer Networks (ISCON)}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-5},
+  doi={10.1109/ISCON57294.2023.10112081}
+}
+
+@ARTICLE{Jain,
+author = {Meenal Jain and Gagandeep Kaur and Vikas Saxena},
+journal = {Expert Systems with Applications},
+title = {A K-Means clustering and SVM based hybrid concept drift detection technique for network anomaly detection},
+year = {2022},
+volume = {193},
+pages = {116510},
+issn = {0957-4174},
+doi = {https://doi.org/10.1016/j.eswa.2022.116510},
+url = {https://www.sciencedirect.com/science/article/pii/S0957417422000112},
+keywords = {Anomaly detection, SVM, K-Means, Clustering, Concept Drift},
+abstract = {Today’s internet data primarily consists of streamed data from various applications like sensor networks, banking data and telecommunication data networks. A new field of study, data stream mining has been gaining popularity to study streamed data behavior. Detection of anomalies in the network traffic also finds its applicability in this context. However traditional machine learning algorithms suffer in providing consistent high accuracy values and give high false alarms. This is due to the presence of concept drift in the captured data streams. Concept drift describes unknown changes in the characteristics of network data over time. Therefore, to handle presence concept drift new methodologies and techniques for drift detection, understanding and adaptation are required. In this paper, we have proposed two techniques, an Error Rate Based Concept Drift Detection and Data Distribution Based Concept Drift Detection and studied their impact. Furthermore, sliding window based data capturing and drift analyzing combined with K-Means Clustering has been used for reducing data size and upgrading training dataset. We have used the Support Vector Machine (SVM) classifier for anomaly detection and retraining of the model has been initiated based on statistical tests. The experiments have been performed on three datasets, namely, generated Testbed Dataset, NSL-KDD and CIDDS-2017. Detection accuracy, KL-Divergence and Kappa Statistics have been used to study the severity of the concept drift in the datasets. After applying the proposed approach, the SVM has been shown to have a better classification accuracy of 93.52%, 99.80% and 91.33% respectively. We achieved a precision rate of 91.84%, 99.1% and 88.3%, a recall rate of 94.30%, 99.2% and 91.7% with an F1 score of 92.9%, 99.15% and 89.6% respectively.}
+}
+
+@ARTICLE{IR,
+  author={IR, Divyasree and K, Selvamani},
+  journal={IEEE Transactions on Network and Service Management}, 
+  title={DAD: Domain Adversarial Defense System Against DDoS Attacks in Cloud}, 
+  year={2022},
+  volume={19},
+  number={1},
+  pages={554-568},
+  doi={10.1109/TNSM.2021.3097903}}
+
+@ARTICLE{Xia,
+  author={Xia, Shi-Ming and Guo, Shi-Ze and Bai, Wei and Qiu, Jun-Yang and Wei, Hao and Pan, Zhi-Song},
+  journal={IEEE Access}, 
+  title={A New Smart Router-Throttling Method to Mitigate DDoS Attacks}, 
+  year={2019},
+  volume={7},
+  number={},
+  pages={107952-107963},
+  doi={10.1109/ACCESS.2019.2930803}}
+
+@ARTICLE{Shi,
+  author={Shi, Lumin and Li, Jun and Zhang, Mingwei and Reiher, Peter},
+  journal={IEEE Transactions on Dependable and Secure Computing}, 
+  title={On Capturing DDoS Traffic Footprints on the Internet}, 
+  year={2022},
+  volume={19},
+  number={4},
+  pages={2755-2770},
+  doi={10.1109/TDSC.2021.3074086}}
+
+@ARTICLE{DAYAL,
+title = {Analyzing effective mitigation of DDoS attack with software defined networking},
+journal = {Computers & Security},
+volume = {130},
+pages = {103269},
+year = {2023},
+issn = {0167-4048},
+doi = {https://doi.org/10.1016/j.cose.2023.103269},
+url = {https://www.sciencedirect.com/science/article/pii/S0167404823001797},
+author = {Neelam Dayal and Shashank Srivastava},
+keywords = {Traceback, Software defined networking (SDN), Distributed denial of service (DDoS) attack, Network security, Software defined wide area network (SD-WAN)},
+abstract = {Distributed Denial of Service (DDoS) attack prevention research is mostly focused upon attack detection. Early attack detection facilitates the network administrator to quickly manage these attacks with least impact on the legitimate users. The approach generally used to manage/mitigate the DDoS attacks is to start dropping the attack/suspicious flows at the location of detection, which affects the communication of legitimate users of the network as well. This paper is focused on comparing the DDoS attack mitigation approaches, as well as, the location of mitigation in the network that will impose the least impact on the legitimate users in the network, resulting in least network performance degradation. A mathematical analysis of packet filtering, rate limiting and controller/server migration techniques for mitigation of DDoS attacks is done, followed by Mininet implementation with realistic traffic. It provides a detailed insight of the pros and cons of respective techniques w.r.t. various network requirements. Further, the identification of appropriate location to deploy desired mitigation technique is done.}
+}
+
+@ARTICLE{YOUSUF,
+title = {DDoS attack detection in Internet of Things using recurrent neural network},
+journal = {Computers and Electrical Engineering},
+volume = {101},
+pages = {108034},
+year = {2022},
+issn = {0045-7906},
+doi = {https://doi.org/10.1016/j.compeleceng.2022.108034},
+url = {https://www.sciencedirect.com/science/article/pii/S004579062200297X},
+author = {Omerah Yousuf and Roohie Naaz Mir},
+keywords = {Internet of Things, Security, DDoS attack, Software-defined network, OpenDayLight, Recurrent neural network},
+abstract = {The Internet of Things (IoT) is an emerging communication paradigm due to its wide range of applications. For IoT, distributed denial of service (DDoS) attacks are becoming increasingly widespread, and the solutions to combat these attacks are in increased demand. The significant contributions of this paper include offering a novel algorithm named DALCNN (Detecting Attack using Live Capture Neural Network) for detecting DDoS attacks in IoT using the concept of recurrent neural network and implementation of a Software-defined-Network (SDN) using OpenDayLight platform. Furthermore, a three-tier architecture is proposed to classify and detect DDoS attacks. The algorithm classifies the kind of attack using a novel activation function and the machine/deep learning concepts. The proposed classifier is tested on 177 instances. The Simulation was carried out using the tools such as Mininet, Wireshark to generate the DDoS attack and accurately detect the different types of DDoS attacks in the network. The simulation results reveal that the values of benchmark parameters – accuracy, true positive rate, false-positive rate, precision, recall, F-measure, and ROC-area are: 99.98%, 0.999, 0.01, 0.999, 0.999, 0.999, and 0.999, respectively. Apart from it, the network performance evaluation of the various open-source controllers’ including Floodlight, Ryu, ONOS, and the OpenDayLight based on the performance metrics – Throughput, Latency, and Aggregate Controller performance as well was carried out. The Simulation results reveal that the proposed algorithm performs efficiently compared to the other existing algorithms. The proposed OpenDayLight controller performs way better than the other open-source controllers.}
+}
