@@ -1,0 +1,248 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{apacite}
+\usepackage{framed}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry}
+
+\title{Mitigation strategies in countering evolving DDoS attack techniques}
+\author{
+   Wong Wai Yee 1221303660 
+    }
+\date{1 September 2023}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+\hspace{0.5cm}The distributed denial of service (DDoS) attack is one of the major cyber-attacks and most perplexing security problems to the current Internet which also brings huge losses to society. When a DDoS assault is launched against a network, that network immediately begins allocating resources to handle the demands. However, if the volume of requests exceeds what the network can manage, it will stop fulfilling new ones. Any request would be rejected even if it came from a valid user, which would interfere with the IoT's ability to perform its services. DDoS attackers often leverage a botnet—a group of hijacked internet-connected devices—to carry out large-scale attacks that appear, from the targeted entity’s perspective, to come from many different attackers. A wide variety of devices may make up a botnet, including Internet of Things (IoT) devices. IoT devices are internet-connected and often use default passwords and lack sound security postures, making them vulnerable to compromise and exploitation. Transmission control protocol (TCP) SYN flood and internet control message protocol (ICMP) Smurf assaults are two of the most common DOS and DDoS exploits attackers use to bring down systems and networks throughout the world.\citeA{YOUSUF} .The traffic is initially created by terminals dispersed over the Internet, and at the victim server, it is then compiled. Second, a single defence point close to the victim is unlikely to be able to stop the vast volume of the aggregated traffic. Third, since the harm may be caused by the overall volume of traffic rather than the content of the traffic, DDoS traffic may resemble legitimate traffic. \citeA{Xia} .
+
+Since DDos attacks are among the most dangerous existing cyber threats to the security and availability of computer systems, networks, and online services. Therefore, cyber security and DDos attacks are closely related to one another. In order to protect data, networks, and devices from various threats, cybersecurity must offer a risk-free and secure environment. The importance of DDoS attacks as a cybersecurity issue is highlighted in this report, which examines the close connection between cybersecurity and DDoS attacks. DDoS attacks not only pose a serious risk to the security and accessibility of digital assets, but they also fall under the category of cybercrime. 
+
+However, the issue of DDoS attack has risen over the years.The months of January 2023 and March 2023 were the second highest in terms of Ransom DDoS activity as reported by our users.Hence, this reviewed research is one of the effort which combines mitigation strategies from 6 previous research papers.
+
+
+\section{Problem Statement \& Objectives}
+\hspace{0.5cm}The strategy behind the DDoS attack is described by the DDoS attack model. The terminals are compromised by the attacker, which constitutes the botnet. Specifically, the attacker install malicious software on vulnerable terminals to compromise them, thus being able to communicate with and control them. The attacker communicates with the handlers, which in turn control the terminals in order to launch a DDoS attack.\citeA{Xia} .As highlighted in the article \citeA{Xia}, DDoS defense system usually has little knowledge regarding which paths DDoS traffic has travelled along, how much traffic travelled along each path, and also which source addresses or prefixes of the DDoS traffic are associated with each path. To address this issue, this review article aims to know the path of DDoS traffic so that we can prevent the attack from becoming worse. Existing DDoS defense systems lack knowledge regarding the paths taken by DDoS traffic which leads to the effectiveness of DDoS mitigation and leaves the network to attacks. Path inference can be inaccurate, IP traceback approaches introduce significant changes to router hardware and software rely on inter-AS collaboration, and need routers on the Internet to constantly monitor the traffic. These approaches are also not well-equipped to provide other footprint information, such as total or per-source bandwidth consumption information or the IP addresses or prefixes of DDoS sources. For COOPRED DDoS system could notify network administrators about possibility of an attack and system provides more time for security management because the network administrators stop the attack before it causes losses. Due to the importance of network security, reducing the damage caused by DDoS attacks. DDoS attack primarily take advantage of the network protocol and cloud services to nullifies the data availability in cloud. In response to these evolving threats, a lightweight detection system called Domain Adversarial Defense (DAD) system has been proposed to effectively handle real-time DDos attack in the cloud.\\
+
+Objectives :
+\begin{enumerate}
+\item To demonstrate how we could use algorithms for DDoS detection and mitigation
+\item To explore the effectiveness of hybrid approaches that combine multiple mitigation techniques
+\item To enhance communication and collaboration among agents in multi-agent systems for DDoS mitigation
+\item To improve scalability and efficiency in handling large scale DDoS attack
+\end{enumerate} 
+
+The rest of this paper is structured as follow. Section 3 conclude our literature review and related work. Section 4 introducing method in mitigating Distributed Denial of Service attacks. Section 5 shows the proven result gathered. Section 6 discussing advantages and research limitation. Lastly, section 7 and 8 includes conclusions and improvement in the future.
+
+\section{Related Work \& Literature review}
+\hspace{0.5cm}In light of the fact that the distributed denial of service (DDoS) attacks are one of the biggest server threats to the current internet. Thus, numerous studies have been done to mitigate the harm these attacks cause.
+
+\subsection{Centralized Reinforcement Learning Router Throttling (CRLRT)}
+\hspace{0.5cm}The paper that has been proposed by \citeA{Xia} stated that the DDoS problem can be seen as a Markov decision process (MDP). Multi-agent router throttling (MART) method based on a hierarchical communication mechanism has been proposed to address this problem. However, each agent is independent with each other and has no communication among them. Therefore, it is hard for them to collaborate to learn an ideal policy to defend DDoS. To solve this multi-agent partially observable MDP problem, that proposes a centralized reinforcement learning router throttling (CRLRT) method based on a centralized communication mechanism.
+
+\subsection{Domain Adversarial Defense System in Cloud (DAD)}
+ \hspace{0.5cm}A novel fog and deep learning based DDoS defense mechanism named Domain Adversarial Defense (DAD) system is proposed by \citeA{IR}. DAD system can quickly adapt itself with limited real-time attack data. It is also can detect the unknown attack and their unpredictable characteristics with minimum latency and better generalization. Additionally, the system provides a simple real-time feature extraction using latent feature extractor. Multiple datasets are used to substantiate the efficacy of DAD. CAIDA-HR attains 7.12\%\ and 3.45\%\ relative improvement over baseline with and without semi-supervision on the CAIDA-LR evaluation set. This model is further evaluated under extreme conditions by training with out-of-domain CIC-2019 which still resulted in 12.88\%\ and 4.69\%\ . On the NSL-KDD, CIC-2019, CIC-2017, and CAIDA, the latent features improved over the raw features by 2.30\%\, 1.22\%\, 0.44\%\, and 0.78\%\ respectively.
+ 
+\subsection{Distributed Denial of System Defense in the Software Defined Network}
+\hspace{0.5cm} \citeA{DAYAL} proposed software defined networking (SDN) which allows to detect and mitigate the DDoS attacks by dynamically generating and imposing the mitigation rule on entire network devices with immediate effect. With the help of SDN controller, the mitigation techniques have been identified. Hence, the four broad categories of mitigation are filtering, rate limiting, access control and resource migration. Thus, if mitigation technique is implemented to the switch nearest to attack source and it will have least impact on the benign network traffic.
+
+\subsection{DDOS Attack Detection using Recurrent Neural Network}
+\hspace{0.5cm} A concept of recurrent neural network has been proposed by \citeA{YOUSUF} to contribute with implementation of a SDN for detecting DDoS attacks in IoT (The Internet of Things). This contributions of this paper include offering a novel algorithm named DALCNN (Detecting Attack using Live Capture Neural Network). When IoT devices are under assault, SDN can help by blocking or rate limiting suspicious traffic, which can help with dynamic flow control and attack prevention. It is concluded that the simulation results reveal the values of benchmark parameters – accuracy, true positive rate, false-positive rate, precision, recall, F-measure, and ROC-area are: 99.98\%\, 0.999, 0.01, 0.999, 0.999, 0.999, and 0.999, respectively.
+
+\subsection{PathFinder System}
+\hspace{0.5cm}To mitigate DDoS attacks, \citeA{Shi} proposed a system that can use to obtain the footprints of the DDoS traffic called PathFinder. Existed DDoS defense systems lack of knowledge regarding the paths taken by DDoS traffic – which leads to the effectiveness of DDoS mitigation and leaves network to attacks. To address this issues, building a pilot version of the PathFinder would be performing substantial performance experiments. These experiments show that PathFinder can deliver accurate information about DDoS flows to a site under attack at reasonable costs both to the systems gathering the data and the defense system that consumes it. The evaluation shows that the PathFinder system is viable which even with a low-end desktop machine it only takes about 2.93 seconds to store 64 million unique IP addresses, or only 115 milliseconds in total to check if they are previously stored, while the memory and network overhead is manageable and scalable, especially with the help of the streaming and zooming mechanisms.
+
+\subsection{COOPRED DDoS System}
+\hspace{0.5cm}Other than that, an intelligent system for DDoS attacks prediction based on early warning signals(EWS) has been proposed by \citeA{Neira} which named COOPRED DDoS. The system aims to increase the time to manage scenarios with DDoS attacks and prevent them. The system utilizes the distribution of network traffic processing, EWS engineering, cooperation between agents, and machine learning. The results indicate that EWS engineering can highlight the preparation signals, allowing the system to predict attacks in four scenarios. The accuracy of the experiments varies from 99.60 \%\ to 99.87 \%\ . \\
+
+\section{Methodology}
+\hspace{0.5cm}Our research extensively examines the domain of cybersecurity, with a particular focus on investigating Distributed Denial of Service (DDoS) attacks. This methodology functions as our roadmap, enabling us to navigate the complex landscape of DDoS mitigation studies. We have pinpointed several strategies for mitigating DDoS attacks, which we will now elaborate upon.
+\subsection{Centralized Reinforcement Learning Router Throttling (CRLRT)}
+\hspace{0.5cm}The author of \citeA{Xia} , suggests a method called Centralised Reinforcement Learning Router Throttling (CRLRT) with two versions: Centralised Communication and Less Communication. Centralised Communication helps overcome the issue of agents not having complete information, with a central agent collecting data from all routers. Each router initially gathers data about its environment and sends it to the central agent. The central agent uses this information to determine how much each router should throttle traffic. Throttling routers then follow these instructions to limit traffic while still serving the server. Rewards are based on how well these actions work. To deal with reward challenges in Multi-agent Router Throttling (MART), the author introduces the concept of server bandwidth adjustments based on post-throttling traffic. Curriculum learning is used to break down the main task into easier subtasks, gradually increasing the difficulty. In CRLRT with Less Communication, each agent uses the deep deterministic policy gradient (DDPG) network to decide whether to exchange information with the central agent. The central agent uses a message pool to decide on throttling actions, communicates these actions to the routers, and the routers follow the instructions to limit traffic and send the excess to the server.
+\subsection{Domain Adversarial Defense System in Cloud}
+\hspace{0.5cm}The Domain Adversarial Defence System (DAD) is a fog-based system designed to identify and stop malicious network traffic before it reaches a cloud server by this author \citeA{IR}. It employs a novel method for extracting hidden data features and normalizing them using the min-max technique. The detection component of DAD uses an auto-encoder architecture for training, allowing it to learn without relying on predefined class labels. This model includes convolutional and feed-forward layers, starting with a 56-dimensional input layer and incorporating 2D convolutional layers like those found in typical CNN models. The output is condensed to a 20-dimensional layer. DAD also utilizes a domain generalization component with a CNN design, including input and convolutional layers, and linear layers for classification and discrimination, with specific dimensions. Both domain discrimination and classification losses are used to assess model convergence.
+\subsection{Distributed Denial of System Defense in the Software Defined Network}
+\hspace{0.5cm}SDN (Software-Defined Networking) is effective for DDoS (Distributed Denial of Service) detection because it can efficiently control and adjust measurement rules across switches. In a particular study, the author in this article \citeA{YOUSUF} introduced new activation functions, like Tanh2, that can outperform existing ones by not excessively changing weights for input patterns. They also developed a system called DALCNN (Detecting Attack using Live Capture Neural Network) with three layers: device layer (hosts), controller layer (OpenDaylight controller for managing flow statistics and communication), and application layer (providing end-user services). They used an RNN-based DALCNN application to detect and counter DDoS attacks in this environment. Furthermore, they proposed an algorithm emphasizing the use of the SDN approach. The DALCNN system includes modules for flow statistics collection, attack detection, and attack mitigation, gathering information from ICMP packets to train the DALCNN algorithm.
+\subsection{DDOS Attack Detection using Recurrent Neural Network}
+\hspace{0.5cm}In a previous study \citeA{DAYAL}, researchers introduced an algorithm, but in this new research paper, they focused on using Software-Defined Networking (SDN) for better mitigation strategies. They improved the algorithm by employing a technique called dynamic blocking, which targets specific data flows based on their destination IP addresses and network protocols. They also introduced rate limiting to control incoming data based on the victim's IP address and protocol. They set up two queues at each switch: one for slower data processing and another for regular-speed data. Suspicious data is put in the slower queue, while normal data is handled in the regular queue. To handle attacks more effectively, they used controller migration. A proxy controller was introduced to manage suspicious flows, reducing the load on the main controller. Suspicious data is redirected to the proxy controller when an attack is detected, while the main controller deals with regular network traffic. The proxy controller carefully assesses each uncertain flow, removing it if it's an attack or forwarding it to the intended recipient if valid. They tested these mitigation techniques in a network setup using Claranet Topology, emulated with the Mininet network emulator, and controlled the switches with the Floodlight controller.
+\subsection{PathFinder System}
+\hspace{0.5cm}PathFinder is a tool for tracking traffic patterns towards a target. In article \citeA{Shi}, the author made significant contributions to PathFinder's design and operation. PathFinder is log-based and helps users gather information about DDoS traffic, including details about Autonomous System (AS) pathways, sources, and bandwidth usage. To use PathFinder, an AS must set up a PathFinder monitor and configure it. In smaller ASs with only a few routers, the monitor can physically connect to each router for monitoring. However, larger ASs with many routers over a large area can use virtual circuits to mirror traffic. The monitor also needs remote login access to routers to perform tasks like querying AS paths or finding the next hop for a specific destination IP address. The monitor selects a group of routers, communicates with them and generates PFLogs. There are two modes: source-agnostic and source-aware. In source-agnostic mode, if the client hasn't requested source addresses, the process gathers all necessary PFLogs. If needed, the monitor can switch to source-aware mode, collecting additional data to create source-based PFLogs using the PFTrie data structure.
+\subsection{COOPRED DDoS System}
+\hspace{0.5cm}Based on this article \citeA{IR} , the COOPRED DDoS system is a network security solution that consists of two main parts: agents and an intelligence center. It uses an Early Warning System (EWS) to detect and manage DDoS attacks. The system employs EWS techniques to gather and process network traffic in a decentralized way. Agents collect and analyze network data and send signals to the intelligence center for cooperation. The intelligence center uses machine learning to identify changes in network patterns that may indicate a DDoS attack. The system goes through five phases: setup, network traffic collection, signal analysis, signal centralization, and administrator notification. During setup, agents and the intelligence center are configured based on factors like hardware availability and network size. Agents are strategically placed in different parts of the network. They maintain time-series data for network attributes, periodically refreshing it. EWS analysis helps detect signals indicating potential attacks. Agents are synchronized to account for latency differences. When the intelligence center detects a potential attack, it alerts network administrators via email or other notification methods like text messages or push notifications.\\\\
+
+In conclusion, these research papers examines different ways to prevent Distributed Denial of Service (DDoS) attacks in various network settings. Each method tackles specific issues and uses distinct approaches to safeguard against harmful traffic and secure the network infrastructure. These methods collectively improve network security and counter DDoS attacks by providing diverse solutions for different network situations.
+\section{Result }
+\hspace{0.5cm} This section explains the evaluation result of each research articles we have reviewed focused on DDoS detection and mitigation, providing insights into the evolving landscape of cyber defense against this formidable threat.
+\subsection{Centralized Reinforcement Learning Router Throttling (CRLRT)}
+\hspace{0.5cm}The main experimental result of this \citeA{Xia} research paper is the validation of the proposed CRLRT( Centralized Reinforcement Learning Router Throttling) method architecture for mitigating DDoS attacks. CRLRT outperforms other methods in terms of action efficiency. In the fixed attack location setting, the action efficiency of SIRT, FRT, and MART is quite poor. MART, in particular, has the worst action efficiency as the actions taken by all agents are found to be useless. CRLRT has been found to be better than other methods, except for LP. These findings indicate that CRLRT is more effective in taking efficient actions to mitigate DDoS attacks. 
+\subsection{Domain Adversarial Defense System in Cloud}
+
+\hspace{0.5cm}The main evaluation result of this research paper is the comparison of performance and overhead of different deep learning systems, such as CNN, LSTM, and DAD. The empirical results show that CNN outperforms LSTM across all datasets, making it a viable model for real-time attack detection. Firstly, in terms of performance and overhead, observations show that LSTM has relatively high overhead in terms of training and adaptation compared to CNN due to its recurrent nature and model complexity. The evaluation time is also affected by the recurrent nature of LSTM, resulting in higher evaluation time compared to CNN. Additionally, LSTM has a 1\% drop in performance accuracy compared to CNN. \citeA{IR} mentions that increasing the model complexity of LSTM leads to higher training and adaptation time, while CNN's training time slightly increases with increasing model complexity. Based on the given information, CNN appears to be more effective than LSTM for DDoS attack detection, as it offers better performance, lower overhead, and less model complexity.
+
+
+Secondly, the overhead during training and adaptation for DAD is slightly higher compared to CNN. However, it is important to note that CNN has lower latency compared to DAD. In conclusion, while CNN has lower latency, DAD surpasses CNN in terms of real-time detection overhead and overall performance. The choice between CNN and DAD depends on the specific requirements and priorities of the DDoS detection system.
+\subsection{DDOS Mitigation with Software Defined Networking}
+\hspace{0.5cm}The main result of this \citeA{DAYAL} research paper is the identification of the best mitigation technique for DDoS attacks in software-defined networks (SDN). The paper analyzes three different mitigation approaches: dynamic blocking, rate limiting, and controller migration. Based on a mathematical comparative analysis and implementation results, it is concluded that controller migration is the most effective technique. It induces less additional load on the network, has the least impact on legitimate traffic, and successfully removes all attack packets from the network. However, it requires additional resources for setup and maintenance.
+\subsection{DDOS Attack Detection using Recurrent Neural Network}
+\begin{table}[h]
+    \centering
+    \caption{Classifier performance between DALCNN and other existing algorithms.}
+    \label{tab:classifier-performance}
+    \begin{tabular}{lcccccc}
+        \toprule
+        Classifier & MLP & SMO & IBK & J48 & DALCNN (Our work) \\
+        \midrule
+        Accuracy   & 96.5\% & 95.73\% & 97.83\% & 97.89\% & 99.98\% \\
+        TRP        & 0.973 & 0.966 & 0.979 & 0.979 & 0.999 \\
+        FRP        & 0.051 & 0.060 & 0.022 & 0.022 & 0.01 \\
+        Precision  & 0.965 & 0.960 & 0.979 & 0.979 & 0.999 \\
+        Recall     & 0.973 & 0.966 & 0.979 & 0.979 & 0.999 \\
+        F-Measure  & 0.969 & 0.963 & 0.979 & 0.979 & 0.999 \\
+        ROC-Area   & 0.973 & 0.953 & 0.978 & 0.979 & 0.999 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\hspace{0.5cm}The main result of this \citeA{YOUSUF} research paper is the development and evaluation of a novel algorithm called DALCNN( Detecting Attack using Live Capture Neural Network) for detecting Distributed Denial of Service (DDoS) attacks in the Internet of Things (IoT) network. The algorithm utilizes a Tanh2 activation function and recurrent neural networks to classify different types of DDoS attacks. The experimental results show that the proposed algorithm outperforms existing DDoS detection algorithms in terms of accuracy, true positive rate, false positive rate, precision, recall, F-measure, and ROC-area. In terms of accuracy, the proposed algorithm achieves a remarkable accuracy value of 99.98\%. The true positive rate (TPR) and false positive rate (FPR) of the proposed algorithm are both 0.999 and 0.01, respectively. The precision of the proposed algorithm is also 0.999. Moreover, the recall and F-measure of the proposed algorithm are both 0.999. Lastly, the ROC area of the proposed algorithm is 0.999. These figures clearly demonstrate the superiority of the proposed algorithm in detecting DDoS attacks.
+\subsection{PathFinder System}
+\hspace{0.5cm}The main result of this \citeA{Shi} research paper is the development of a system called PathFinder, which captures DDoS traffic footprints on the Internet.The evaluation showed that PathFinder significantly improves the efficacy and efficiency of DDoS defense. By utilizing PathFinder's footprints, a DDoS defense system can make better filter deployment decisions, resulting in using fewer resources and achieving a higher level of success. 
+
+Improved Filter Deployment: PathFinder provides footprints of DDoS traffic to a victim, including path and traffic information. This allows a DDoS defense system to make better decisions when deploying filters to discard DDoS traffic, resulting in more effective defense against DDoS attacks.
+
+Reduced Resource Usage: By utilizing PathFinder, a DDoS defense system can significantly reduce the number of filters needed to subdue DDoS traffic. Compared to defense systems without PathFinder, the system using PathFinder requires much fewer resources while achieving a higher level of success in filtering out DDoS traffic.
+\subsection{COOPRED DDoS System}
+\hspace{0.5cm}The author of this paper \citeA{Neira} compares different machine learning algorithms and evaluates their performance in predicting DDoS attacks. Here is a few experiments conducted by the researchers:
+
+In Experiment 1, the intelligence center utilizes the Adaboost machine learning technique. The training set used in this experiment is Scenario 10 from the CTU-13 dataset, while the test set is Scenario 11. The network traffic is segmented, and the number of packets sent per second in each network segment is counted. The packet count in Experiment 1 is shown in Figure 1. Throughout the training set, the AG-128 has the highest peaks in the number of packets sent, which can be attributed to the attack bots having IP addresses in the AG-128 range. The test set exhibits a similar behavior, with the AG-128 having the most packet peaks. The number of packets sent by AG-128 increases after bot infection in both the training and testing sets. 
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{adaboost.png}\\
+\caption{Packet count in Experiment 1}
+\end{figure}
+\end{center}
+
+In Experiment 2, two scenarios from the DDoS evaluation dataset were used. The "UDP Attack" scenario was selected as the training set, while the "UDP-Lag Attack" scenario was used as the test set. The training set consisted of 1277 seconds, and the test set had 1260 seconds. The packet count analysis showed in Figure 2 that in the training set, the AG-128 had the highest peaks in the number of packets sent. This is because all the attack bots had IP addresses in the AG-128 range. In the test set, the AG-128 still had some traffic peaks, but the agent with the most peaks was the AG-192. The total number of packets processed by AG-128 was 15020, while AG-192 processed 28593 packets. The COOPRED DDoS system utilized Early Warning Signals (EWS) engineering to identify anomalies indicating a possible DDoS attack. The system successfully predicted the attack 2 minutes and 8 seconds before its launch. The prediction occurred at the 472nd second of the test set. Although the prediction was accurate, it would have been more advantageous if the system had identified the attack earlier, such as at the 268th or 365th second. Overall, Experiment 2 demonstrated the effectiveness of the COOPRED DDoS system in predicting DDoS attacks using EWS engineering.
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{Exp2.png}\\
+\caption{Packet count in Experiment 2}
+\end{figure}
+\end{center}
+
+Experiment 3 aimed to evaluate the performance of the intelligence center using a deep learning technique called MLP (Multilayer perceptron). The training and testing sets used in Experiment 1 were also used in Experiment 3. The objective was to determine if deep learning techniques could improve the results obtained previously. The results obtained in Experiment 3 showed that the intelligence center successfully identified an attack warning in the test set. The second correctly classified as an attack warning was 549. However, there were a total of 11 misclassifications, with 10 normal seconds being misclassified as attack warnings and one attack warning being classified as a normal second. The accuracy of the intelligence center in Experiment 3 was 98.87\%. Comparing the results of Experiment 3 with Experiment 1, it can be observed that Experiment 1 had fewer errors and higher accuracy. However, Experiment 3 predicted the attack earlier, with the attack warning occurring in the 549th second compared to the 576th second in Experiment 1. This means that the MLP technique used in Experiment 3 provided a notification about a possible DDoS attack 3 minutes and 49 seconds before the attack started.
+
+Experiment 4 aimed to replicate Experiment 2 but with a different machine learning technique, specifically using MLP (Multilayer perceptron) in the intelligence center. The accuracy of the intelligence center equipped with MLP in Experiment 4 is 99.60\%. The precision for the class of warnings is 33\%, indicating that out of the three times the intelligence center classified a second as an attack warning, only one classification was correct. The precision for the normal second class is 99.76\%. The recall for the class of warnings is 25\%, meaning that the system correctly classified one out of the four attack warnings. The recall for the class of normal seconds is 99.84\%. Hence, Experiment 4 using MLP in the intelligence center showed some improvements compared to Experiment 2, but there were still missed attack warnings and some misclassifications. \\
+
+In summary, these research articles collectively contribute valuable insights and advancements in the field of DDoS detection and mitigation. The diverse approaches and techniques explored in these studies provide a rich foundation for further research and the development of more effective DDoS defense strategies. 
+
+\section{Discussions} 
+\hspace{0.5cm} But the question is, how effective are these mitigation strategies in countering evolving DDoS attack techniques?
+
+The mitigation strategies in developing DDoS attack techniques that are discussed in this research review are effective which are proven in the result. Based on our perspective, the most adequate technique is implementing PathFinder System because the design for this system is based on real-world factors with high speed and large scale of DDoS traffic. Furthermore, the rapid arrangements that include the simplest way to store traffic footprint information.
+
+However, not all of the techniques propose the best solution in  mitigating DDoS attack. For instance, in COOPRED DDoS system  only focuses on EWS engineering which is not applicable in every case of DDoS attack.
+
+
+\footnotesize
+\begin{longtable}{|p{3cm}|p{8cm}|p{5cm}|}
+\hline
+\textbf{Reference} & \textbf{Advantages/Contributions} & \textbf{Research Limitation} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Reference} & \textbf{Advantages/Contributions} & \textbf{Research Limitation} \\
+\hline
+\endhead
+
+Centralized Reinforcement Learning Router Throttling (CRLRT), \citeA{Xia} &
+ \begin{itemize}
+ \item It suggests a strategy called Centralized Reinforcement Learning Router Throttling with Reduced Communication (CRLRT-LC) to safeguard against DDoS attacks.
+ \item To make the DDoS problem simulation more authentic, we tweak the reward function of MART for better consistency.
+ \item Additionally, the author introduces a The Deep Deterministic Policy Gradient network for each router to minimize communication delays.
+\end{itemize}
+&  
+\begin{itemize}
+\item The CRLRT-LC method uses less information compared to the CRLRT method. This limitation suggests that the CRLRT-LC method may not fully utilize available information, potentially affecting its effectiveness in mitigating DDoS attacks.
+\end{itemize}
+
+\hline 
+Domain Adversarial Defense System in Cloud, \citeA{IR} & 
+\begin{itemize}
+\item It implements a revolutionary DDoS protection system called DAD that is based on fog and deep learning and can quickly react to limited real-time attack data.
+\item The system offers a straightforward, in-the-moment feature extraction utilizing our latent feature extractor, which can extract fixed dimensional characteristics from any kind of attack.
+\end{itemize} 
+
+& 
+
+\begin{itemize}
+\item Requirement of a large amount of well-distributed data to train efficient detection models
+\item Training data samples must be in the same domain as data available during evaluation
+\end{itemize} \\
+
+\hline
+DDOS Attack Detection using Recurrent Neural Network, \cite{YOUSUF} & Propose a novel technique DALCNN implemented in OpenDaylight platform for detecting DDoS attacks &  Does not address the discovery of optimum global features, which may affect the accuracy of the detection system.\\
+
+\hline
+DDOS Mitigation with Software Defined Networking, \citeA{DAYAL}  &
+\begin{itemize}
+\item Introducing dynamic filtering methods like blocking can be beneficial as they can discard some legitimate packets without imposing extra network strain or necessitating additional resources for the mitigation process.
+\item Additional processing rate limiting-based mitigating strategies are used.
+\end{itemize}
+&
+\begin{itemize}
+\item For dynamic blocking technique, it is not suitable for the networks with high reliability requirements.
+\item Lack of real-world testing, does not provide empirical evidence
+\end{itemize}\\
+\hline
+
+PathFinder System, \citeA{Shi} &
+\begin{itemize}
+\item Offering the PathFinder system as a service that a DDoS defense system can use to obtain the footprints of the DDoS traffic to a victim, including specifying numerous aspects of the footprints like whether the source address and/or bandwidth information is required.
+\item Provides numerous design elements to log traffic at a line rate, as well as streaming and zooming methods that make it easier to store and transmit DDoS footprints.
+\end{itemize}
+&
+\begin{itemize}
+\item The author has reached the objective by characterizing its effectiveness, speed and costs.
+\item Does not discuss future work.
+\end{itemize} \\
+
+\hline
+
+COOPRED DDoS System, \citeA{Neira} &
+\begin{itemize}
+\item It evaluates EWS engineering and the COOPRED DDoS system.
+\item The system incorporates machine learning, engineering for EWS, agent interaction, and distribution of network traffic processing.
+\end{itemize}
+&
+\begin{itemize}
+\item The attributes utilized by the agents.
+\item Does not address the future works.
+\item The author reaches the objective only to evaluate EWS engineering and the COOPRED DDoS system.
+\end{itemize} \\
+\hline
+
+\end{longtable}
+\normalsize 
+
+\section{Conclusion}
+\hspace{0.5cm}In conclusion, this research has shed light on how effective these mitigation strategies are in countering evolving DDoS attack techniques. Through a thorough analysis on investigating Distributed Denial of Service (DDoS) attacks, we have uncovered several important findings. This reviewed research paper mainly focuses on strategies that discuss the most successful ways to detect and mitigate DDoS attacks. Each technique offers results which benefits the victim the most. This work serves as a stepping stone toward a more comprehensive comprehension of the effectiveness in mitigating DDoS attacks , and we hope it inspires further investigation and innovation in this field.
+
+\section{Future work}
+\hspace{0.5cm}According to the article \citeA{DAYAL}, tracing back the attack sources in the network should be the main goal of DDoS attack defence in the future. Not only that, in \citeA{YOUSUF} the study proposes that broaden range of DDoS attack to be classified and implement new machine learning techniques including Convolution Neural Networks (CNN) and Autoencoders to carry out DDoS attack detection in the OpenDayLight platform.
+
+Based on \citeA{Xia}, the author plans to pursue several objectives. Firstly, aim to employ imitation learning to mimic the LP's policy. Secondly, intend to expand our investigation to encompass larger-scale networks through the utilisation of Hierarchical Reinforcement Learning. Lastly, introduce communication delays to enhance the realism of the environment setting. Finally, in the article \citeA{IR} the author intends to use the neural network-based latent feature extraction approach, which inherits sampling techniques by adding additional objective procedures and utilising several trimming techniques.
+
+\bibliographystyle{apacite}
+\bibliography{Reference}{}
+\end{document}
