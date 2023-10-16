@@ -1,0 +1,258 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{apacite}
+\usepackage{framed}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{pgfgantt}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage[a4paper,margin=2.0cm,includefoot]{geometry}
+
+\title{An Unsupervised Learning Approach in COOPRED System to Evolving DDoS Attack Detection}
+\author{
+   Wong Wai Yee 1221303660
+    }
+\date{12 September 2023}
+
+\begin{document}
+\maketitle
+\section{Executive Summary}
+\hspace{0.5cm} In response to the heightened risk of DDoS attacks during the pandemic, this research proposal introduces the COOPRED System, a novel approach to DDoS attack detection that aims to reduce dependency on labelled data through the incorporation of unsupervised machine learning techniques. The COOPRED System will process network traffic data and produce labels for unsupervised learning by using mini K-means clustering and Support Vector Machines (SVM). Our research methodology involves processing network traffic data using mini batch K-means clustering and Support Vector Machines (SVM). Mini batch K-means is chosen for its suitability in real-time or near-real-time DDoS detection, as it can efficiently handle large datasets. We utilize SVM for anomaly detection, with anomaly scores serving as automatic threat indicators. By limiting anomaly scores, enhancing system adaptability, and minimizing the need for expensive data labeling, the COOPRED System is designed to autonomously detect potential DDoS threats. Additionally, we plan to conduct a comparative analysis of the COOPRED System against traditional supervised methods, evaluating its accuracy and adaptability. As DDoS attack patterns continually evolve, the COOPRED System's anomaly score criteria will be regularly monitored, allowing it to dynamically adapt to emerging threats. The expected results are new perception of COOPRED System design, new COOPRED System indicator and new optimal COOPRED System solution which impacts the society, nation and economy. This research holds the potential to significantly enhance DDoS detection capabilities, safeguarding network resilience and security in a rapidly changing digital landscape, especially during times of crisis such as the pandemic.\\
+\textbf{Keywords : DDoS attack, COOPRED System, Unsupervised learning, K-means clustering, Support Vector Machines (SVM)}
+
+\section{Introduction}
+
+\hspace{0.5cm} Amidst the coronavirus pandemic, connectivity played a pivotal role in facilitating online education, virtual conferences, remote medical consultations through video calls, and telecommuting. Society sought to bolster its security measures in response to the elevated risk of being impacted by DDoS attacks. Prevent, detect and mitigate are ways to counter DDoS attacks. Network administrators face a constrained time frame to mitigate losses resulting from DDoS attacks. Two factors contribute to this restricted window for responding to DDoS attacks. First, massive traffic volume increasing after the attack is constantly evolving. Secondly, the defense mechanisms require time to detect and mitigate DDoS attack. Hence, introducing the COOPRED DDoS system ,  a cooperative system for predicting DDoS attacks to increase the time to manage issues with DDoS attack and  prevent their occurrence.  
+The COOPRED system faces critical issues exacerbated by the pandemic situation such as existing system acquired and maintained large labelled datasets for supervised learning has become even more challenging due to resource constraints and disruptions. Therefore, the existing COOPRED system has been depending on labelled data for DDoS attack detection. The traditional COOPRED system's operational resilience is crucial, and its reliance on extensive data labelling hampers its ability to operate effectively in rapidly changing conditions, especially in terms of crisis.
+
+\section{Problem Statement}
+
+\hspace{0.5cm} In today's digital landscape, safeguarding network security against Distributed Denial of Service (DDoS) attacks has never been more critical, especially during unprecedented events like the pandemic. The successful deployment of the COOPRED system hinges on addressing a fundamental issue—data dependency. This issue justifies in several ways:
+\begin{itemize}
+\setlength{\itemsep}{-5pt}
+\item  \textbf{Reduction of dependency on labelled data:} The incorporation of unsupervised machine learning techniques is essential to enhance the system's adaptability. Thus, the COOPRED system can swiftly adapt to emerging attack patterns and changing network environments.
+\item \textbf{Resource constraints:} The traditional DDoS detection methods heavily rely on labeled data, which can be resource-intensive and challenging to acquire, especially during a crisis like the pandemic.
+\item \textbf{Operational Resilience:} The existing COOPRED system, which relies on extensive data labeling, faces operational challenges in rapidly changing conditions, such as during a crisis.
+\end{itemize}
+\hspace{0.5cm} This study aims to assess the effectiveness of the COOPRED system in reducing the need for labeled data for DDoS attack detection compared to traditional supervised methods. It also explores the potential improvement in detection accuracy by using diverse attributes in COOPRED. The research involves implementing COOPRED, an unsupervised machine learning system, to detect DDoS attacks. The main goals are to reduce data dependency, adapt to evolving attack patterns, and compare COOPRED's performance with traditional supervised methods in DDoS detection. The research gap lies in exploring the effectiveness of COOPRED in reducing data dependency compared to traditional supervised methods and improving detection accuracy by utilizing diverse attributes. This research is significant for its potential to enhance DDoS detection without relying on labeled data\\
+
+The primary motivation behind the COOPRED System is:
+\begin{itemize}
+\setlength{\itemsep}{-5pt}
+\item \textbf{In real-time operation:} By leveraging mini batch K-means clustering and Support Vector Machines (SVM), making it well-suited for rapidly evolving DDoS threats.
+\item \textbf{Cost Reduction:} Reducing the dependency on labeled data can lead to cost savings, making DDoS detection more accessible and affordable for organizations. 
+\item \textbf{Safeguarding Network Resilience:} Ultimately, the motivation underscores the potential impact of the COOPRED System in enhancing DDoS detection capabilities, thereby safeguarding network resilience and security, especially during crises like the pandemic.
+\end{itemize}
+
+
+\section{Research Questions, Hypotheses and Objectives}
+
+\hspace{0.5cm}Research Questions: 
+\begin{itemize}
+\setlength{\itemsep}{-5pt}
+\item Can a COOPRED system effectively reduce the dependency on labelled data for DDoS attack detection?
+\item How can the utilization of different attributes in the COOPRED system improve DDoS attack detection accuracy?
+\item How does the COOPRED system performance unsupervised learning approaches in DDoS attack detection?
+\end{itemize} 
+
+Hypotheses:
+\begin{itemize}
+\setlength{\itemsep}{-5pt}
+\item The COOPRED system can significantly reduce the dependency on labelled data for DDoS attack detection compared to traditional supervised learning methods.
+\item Incorporating a broader range of attributes into the COOPRED system will result in improved accuracy in detecting DDoS attacks.
+\item The COOPRED system will demonstrate superior performance to conventional supervised learning methods in the context of DDoS attack detection.
+\end{itemize} 
+
+Objectives : 
+
+Aims to reduce the dependency on labelled data with unsupervised machine learning. \\
+
+Micro objectives : 
+\begin{itemize}
+\setlength{\itemsep}{-5pt}
+\item To design and implement a COOPRED system for DDoS attack detection that leverages unsupervised machine learning.
+\item To evaluate the COOPRED system performance in reducing the need for labelled data by comparing it with supervised learning methods.
+\item To assess the COOPRED system ability to detect and adapt to evolving DDoS attack patterns.
+\end{itemize}
+
+\section{Literature Review Summary} 
+\subsection{Summary}
+\hspace{0.4cm}The authors in \citeA{Xia} introduced the multi-agent router throttling (MART) but MART agents lack collaboration. They proposed centralized reinforcement learning router throttling (CRLRT) method.
+
+DDoS defense mechanism named Domain Adversarial Defense (DAD) system is proposed by \citeA{IR}. DAD adapts quickly and shows significant improvements over baseline performance on various datasets. 
+
+\citeA{DAYAL} proposed software defined networking (SDN) by dynamically generating and imposing mitigation rules on network devices. Besides, implementing mitigation techniques at the source of the attack minimizes the impact on benign network traffic. 
+
+A concept of recurrent neural network has been proposed by \citeA{YOUSUF} within an SDN framework to detect DDoS attacks in IoT devices. DALCNN (Detecting Attack using Live Capture Neural Network) has been introduced and report high benchmark parameter values. 
+
+Due to the lack of knowledge about traffic paths, \citeA{Shi} proposed a system called PathFinder. It delivers accurate information about DDoS flows at reasonable costs and is shown to be viable in performance experiments.
+
+\citeA{Neira} proposed an intelligent system on early warning signals (EWS) named COOPRED DDoS system. This system enchances preparation and cooperation among agents using machine learning. It demonstrate high accuracy in predicting attacks.
+
+\subsection{Research Gap}
+\hspace{0.4cm}The research gap identified is the attributes utilized by the agents in the COOPRED DDoS system proposed by \citeA{Neira}, which currently relies on specific labeled data or attributes for effective functioning. The authors recognize this limitation and intend to reduce the dependence on labeled data using unsupervised machine learning. As a response, our group is working to improvise the COOPRED DDoS system to address this problem.
+
+\subsection{Benchmark}
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|p{3.3cm}|p{2.5cm}|p{3.2cm}|p{3.2cm}|p{3.2cm}|}
+\hline
+Reference & Detect DDoS Attacks & Reduces Labelled Data Dependency & Comparing with Supervised Learning Methods & Adapts to Evolving Attack \\
+\hline
+COOPRED DDoS System, \citeA{Neira} & Yes & No & No & No \\
+\hline
+Various Machine Learning Techniques, \citeA{Singh} & Yes & Yes & Yes & Yes \\
+\hline
+Unsupervised Learning with One-Class SVM and K-Means Clustering, \citeA{Hoang} & Yes & Yes & Yes & No \\
+\hline
+K-Means clustering and SVM based hybrid concept drift detection, \citeA{Jain} & No & Yes & Yes & No\\
+\hline
+\end{tabular} }
+\caption{Benchmark}
+\end{table}
+
+\section{Research Methodology}
+\subsection{To design and implement a COOPRED system for DDoS attack detection that leverages unsupervised machine learning.}
+\hspace{0.4cm} To design and implement a COOPRED system for the detection of DDoS attacks using unsupervised machine learning, we have chosen to employ an approach that combines mini batch K-means clustering with 3 and 5 clusters alongside Support Vector Machines (SVM) because while implementing a suitable storage approach, mini batch K-means clustering executes more quickly than K-means clustering \citeA{Singh}.This begins with the collection and preprocessing of network traffic data, to capture relevant network behaviour attributes. These clusters effectively serve as labels for our unsupervised approach. We next use these labelled clusters to train SVM models, specifically one-class SVM, for anomaly recognition. 
+
+In Figure 1 is a sample of k-means clustering using OC-SVM in \citeA{Jain}. When monitoring incoming network data, we allocate data points to clusters and use SVM to discover anomalies inside each cluster, classifying data points as normal or abnormal. Limits are set for anomaly scores, which activate warnings when they exceed set limits as given in Eq.(1) .We have to make some adjustments to this equation from \citeA{Hoang} in order to make it suitable for our situation, where Ai be the anomaly score and T is the threshold limit. These warnings could be signals for automatic defences against possible DDoS attacks.
+\begin{equation}
+Ai > T 
+\end{equation}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.3]{K-means.png}
+\caption{K-means clustering}
+\end{figure}
+\end{center}
+
+\subsection{To evaluate the COOPRED system performance in reducing the need for labelled data by comparing it with supervised learning methods.}
+\hspace{0.4cm}In order to evaluate how efficiently the COOPRED system performs in reducing the requirement for labelled data, our proposed method may be more useful in identifying the early warning indicators of a DDoS attack. In this article's \citeA{Neira} supervised learning, the authors use Kurtosis, Skewness, and Smax, which are used in early Warning signs (EWS), to identify potential DDoS attacks based on changes in the data distribution. Contrary to unsupervised learning, the limitations for anomaly are used to identify potential DDoS attacks. 
+
+\subsection{To assess the COOPRED system ability to detect and adapt to evolving DDoS attack patterns.}
+\hspace{0.4cm}Assessing the COOPRED system's ability to detect and adapt to evolving DDoS attack patterns. Previously, we constructed mini K-means and trained one-class SVM models; this phase will become historical data and be utilised to create a baseline for the system's behaviour. The anomaly score criteria will be regularly examined over time as the COOPRED system adapts to new attack patterns, exactly as it would in a real-world scenario, to make it more effective against evolving DDoS attacks. The attack patterns will change over time, as seen by the ongoing monitoring, and the baseline that has been established will need to be modified to prevent the emergence of too many false alarms.
+
+
+\section{Research Activities, Milestones and Timelines}
+
+% first table
+\begin{table}[h]
+\centering
+\resizebox{0.95\textwidth}{!}{
+    \begin{tabular}{|p{1.2cm}|p{6cm}|p{6cm}|p{2.5cm}|}
+        \hline
+        Number & Milestone & Project Activities/Deliverable & Date to be completed \\
+        \hline
+        1  & Completion of the designing and implementing a COOPRED system for DDoS attack detection that leverages unsupervised machine learning. & Designing and implementing a COOPRED system for DDoS attack detection that leverages unsupervised machine learning & April/2024 \\
+        \hline
+        2 & Completion of the evaluating the COOPRED system's performance in reducing the need for labelled data by comparing it with supervised learning methods. & Evaluating the COOPRED system's performance in reducing the need for labelled data by comparing it with supervised learning methods. & October/2024 \\
+        \hline
+        3 & Completion of the assessing the COOPRED system's ability to detect and adapt to evolving DDoS attack patterns and compare it to traditional supervised learning approaches. & Assessing the COOPRED system's ability to detect and adapt to evolving DDoS attack patterns & April/2025 \\
+        \hline
+        4 & Project Completion & Assessing the COOPRED system's ability to detect and adapt to evolving DDoS attack patterns  & April/2025 \\
+        \hline
+    \end{tabular}}
+    \caption{Project Milestones}
+\end{table} 
+
+
+%second table
+\begin{table}[h]
+\resizebox{\textwidth}{!}{% Resize the Gantt chart to fit the text width
+\begin{ganttchart}[hgrid,vgrid]{1}{36} % 36 months (3 years), added grid lines
+\gantttitle{2023}{12} 
+\gantttitle{2024}{12} 
+\gantttitle{2025}{12} \\
+
+\gantttitlelist{1,...,12}{1}
+\gantttitlelist{1,...,12}{1} 
+\gantttitlelist{1,...,12}{1} \\
+
+\ganttbar[bar/.append style={fill= blue}]{Project Activities 1}{11}{16} \\
+\ganttbar[bar/.append style={fill= blue}]{Project Activities 2}{17}{22} \\
+\ganttbar[bar/.append style={fill= blue}]{Project Activities 3}{23}{28} \\
+\ganttbar[bar/.append style={fill= blue}]{Milestone 1}{16}{16} \\
+\ganttbar[bar/.append style={fill= blue}]{Milestone 2}{22}{22} \\
+\ganttbar[bar/.append style={fill= blue}]{Milestone 3}{28}{28} \\
+\ganttbar[bar/.append style={fill= yellow}]{Project Complete\ion}{28}{28}
+\end{ganttchart}
+}
+\caption{Gantt Chart}
+\end{table}
+
+
+%flowchart
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=1.5cm, minimum height=0.8cm, text centered, draw=black, fill=blue!30, font=\small]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=1.5cm]
+
+\node (start) [startstop] {Start};
+\node (data) [io, below of=start] {Collect and preprocess network traffic data};
+\node (clusters) [process, below of=data] {Apply mini batch K-means clustering with 3 and 5 clusters};
+\node (svm) [process, below of=clusters] {Train one-class SVM models for anomaly recognition};
+\node (monitor) [process, below of=svm] {Monitor incoming network data};
+\node (evaluate) [io, below of= monitor] {Evaluate COOPRED system performance};
+\node (allocate) [process, below of=evaluate] {Allocate data points to clusters};
+
+\node (svm2) [process, below=2cm of allocate] {Use SVM to discover anomalies in each cluster};
+\node (assess) [io, below of= svm2] {Assess ability to detect and adapt to evolving attack patterns};
+\node (limits) [process, below of=assess] {Set limits for anomaly scores};
+\node (activate) [process, below of=limits] {Activate warnings when scores exceed limits};
+\node (end) [startstop, below=1.5cm of activate] {End};
+
+\draw [arrow] (start) -- (data);
+\draw [arrow] (data) -- (clusters);
+\draw [arrow] (clusters) -- (svm);
+\draw [arrow] (svm) -- (monitor);
+\draw [arrow] (monitor) -- (evaluate);
+\draw [arrow] (evaluate) -- (allocate);
+\draw [arrow] (allocate) -- (svm2);
+\draw [arrow] (svm2) -- (assess);
+\draw [arrow] (assess) -- (limits);
+\draw [arrow] (limits) -- (activate);
+\draw [arrow] (activate) -- (end);
+\draw [arrow] (evaluate.east) -- ++(3,0) |- (end.east);
+\draw [arrow] (assess.east) -- ++(2,0) |- (end.east); 
+
+\end{tikzpicture}
+\caption{Research Activity Flowchart}
+\end{figure} 
+
+\newpage
+\section{Expected Results and Impact} 
+\hspace{0.4cm}
+\begin{table}[H]
+\centering
+\resizebox{0.95\textwidth}{!}{
+    \begin{tabular}{|p{2.7cm}|p{4.5cm}|p{4.5cm}|p{4.5cm}|}
+        \hline
+         Expected Result & Impact on Society & Impact on Nation & Impact on Economy \\
+        \hline
+        New perception of COOPRED System design & Fostering knowledge sharing, skill development, and a stronger sense of collective responsibility for cybersecurity. & Enhancing the ability of national cybersecurity agencies to respond to emerging threats effectively, contributing to the nation's overall security. &  Becoming a trusted partner in global cybersecurity efforts, benefiting its diplomatic and economic relationships. \\
+        \hline
+        New COOPRED System indicator & Society could benefit from increased innovation in the cybersecurity field. & Potentially attracting investments and talent to the country's cybersecurity sector. & Protecting key sectors of the economy, such as finance, healthcare, and energy, from disruptive DDoS attacks, safeguarding the nation's economic stability. \\
+        \hline
+        New optimal COOPRED System Solution & Increasing trust and reliance on online services, which are becoming increasingly integral to daily life. & Lead to greater stability within the nation, as cyber threats can have wide-reaching effects on public confidence and trust. & Improving user experiences and reduced financial losses for individuals and businesses. \\
+        \hline
+\end{tabular}}
+    \caption{Expected Result and Impact}
+\end{table}
+
+\bibliographystyle{apacite}
+\bibliography{Reference}{}
+\end{document}
